@@ -1,0 +1,4 @@
+1. Use strong Host Key Algorithms for SSH connection.
+2. Use non-standard SSH port (not 22 or 2222).
+3. Enforce high password compelxity for all server users.
+4. Make IP Restrictions for SSH Connections (Allow only specific block of IPs).
