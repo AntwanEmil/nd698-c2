@@ -4,4 +4,13 @@
 #Configuration lines:
 
 
+# groupadd -r apache-group
+# useradd apache-user -r -g apache-group -d /var/www -s /sbin/nologin
 
+in  /etc/apache2/envars edit the following lines:
+    export APACHE_RUN_USER=apache-user
+    export APACHE_RUN_GROUP=apache-group
+then restart apache2 (sudo service apache2 restart)
+
+** To make sure apache-user is running apache2 we can list all services running by this user (sudo lsof | grep apache-user) and notice apache2.
+ 

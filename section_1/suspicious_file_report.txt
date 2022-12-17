@@ -1,8 +1,14 @@
 # provide the additional filename that you have identified as a potentially suspicious file. Also provide details about the Command and control Domain which is hardcoded inside this file. 
 
 # Filename
-
+SSH-One
 
 # Callout domain
-
+    - First it turns iptables off.
+    - Then, it adds the files(SSH-T and SSH-One) to the rc.local file (in order to make them executable and execute them) 
+    - the SSH-One script downlaods ssh files from either of the given domains 
+    hfs_m=http://darkl0rd.com:7758/SSH-T
+    hfs_s=http://darkl0rd.com:7758/SSH-One
+      and create remote SSH connection.
+   
  
