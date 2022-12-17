@@ -4,8 +4,8 @@
 #Configuration lines:
 
 
-# groupadd -r apache-group
-# useradd apache-user -r -g apache-group -d /var/www -s /sbin/nologin
+$groupadd -r apache-group
+$useradd apache-user -r -g apache-group -d /var/www -s /sbin/nologin
 
 in  /etc/apache2/envars edit the following lines:
     export APACHE_RUN_USER=apache-user
