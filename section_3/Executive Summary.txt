@@ -1,0 +1,18 @@
+On the 22nd of sep 2020 a complete attack was performed on the server
+
+1. The attacker with ip 192.168.56.1 tried to brute force SSH passwords.
+2. Since SSH is not secured proberly (refer to section2/additional_remote_security_recommendations),
+   the attacker succeeded in breaking into the system as user `ubuntu`.
+3. After Gaining user access, he added a new user and group with the name `darklord`.
+4. Then he installed a malicious code in the /tmp directory to open port `56565` to him in order to
+   keep persistence on the server.
+
+
+In order to  contain the threat the following steps were taken:
+
+1. Adding the attacker's ip to the blacklist of iptables to reject connections in/out to this ip.
+2. Shutting down the malicious process running at /tmp and deleting it.
+2. Prohibiting remote login as root via SSH.
+3. Performing OpenVas in-depth scan and mitigating all the mentioned vulnerabilites (Medium and High).
+4. Patching Apache and de-privilge the apache account in order to prevent upcoming
+   easy privilege escalation from attackers.

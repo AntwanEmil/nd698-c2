@@ -1,31 +1,14 @@
 # Provide the backdoor entries created by the nation state attackers. 
 
 # Rouge Username
-voldemort
+darklord
 
 # Backdoor process name
-using the following Command: $ps -aux | grep root
-    /sbin/getty -8 38400
+remotesec
+using the following Command: $ps -aux | grep tmp
+    /tmp/remotesec -k -l 56565
 
 
 # Backdoor port number the above process is listening on
-    38400
-
-
-
-** NB: by using: $sudo netstat -antp
-the given processes listening at the moment of capturing are only these:
-
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      1088/mysqld     
-tcp        0      0 127.0.1.1:53            0.0.0.0:*               LISTEN      843/dnsmasq     
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      982/sshd        
-tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      2102/cupsd      
-tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      2365/postgres   
-tcp        1      0 10.0.2.15:49824         185.125.188.133:80      CLOSE_WAIT  11492/ubuntu-geoip-
-tcp6       0      0 :::80                   :::*                    LISTEN      2616/apache2    
-tcp6       0      0 :::22                   :::*                    LISTEN      982/sshd        
-tcp6       0      0 ::1:631                 :::*                    LISTEN      2102/cupsd      
-tcp6       1      0 ::1:53614               ::1:631                 CLOSE_WAIT  1031/cups-browsed
-
-* No abnormal port is listening at this moment* 
+    56565
+using the following command: $sudo netstat -ltnp
